@@ -101,6 +101,7 @@ transition:0.2s;
 @media (prefers-reduced-motion: reduce) {
   .collapse, text{
 transition: 100s;
+      transition-timing-function: ease-in-out;
   }
 }
 
