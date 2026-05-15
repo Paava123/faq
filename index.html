@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ accordion</title>
+<link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+<main class="main-cont">
+  <div class="head">
+    <img src="assets/images/icon-star.svg" alt="star" class="star">
+  <p class="faq">
+  FAQs
+  </p>
+  </div>
+<div>
+<div class="inline " onclick="OpenUp(1)">
+<p class="text">
+  What is Frontend Mentor, and how will it help me?
+</p>
+<button type="button" class="button" ><img src="assets/images/icon-plus.svg" alt="plus" class="plus" id="img1"></button>
+</div>
+
+<p class="collapse hidden" id="text1">
+  Frontend Mentor offers realistic coding challenges to help developers improve their 
+  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+  all levels and ideal for portfolio building.
+</p>
+</div>
+<div>
+<div class="inline border-top" onclick="OpenUp(2)">
+<p class="text">
+  Is Frontend Mentor free?
+</p>
+<button type="button" class="button" ><img src="assets/images/icon-plus.svg" alt="plus" class="plus" id="img2"></button>
+</div>
+
+<p class="collapse hidden" id="text2" >
+  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+  option providing access to a range of projects suitable for all skill levels.
+</p>
+</div>
+<div>
+<div class="inline border-top" onclick="OpenUp(3)">
+<p class="text">
+  Can I use Frontend Mentor projects in my portfolio?
+</p>
+<button type="button" class="button" ><img src="assets/images/icon-plus.svg" alt="plus" class="plus" id="img3"></button>
+
+</div>
+
+<p class="collapse hidden" id="text3" >
+  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+  way to showcase your skills to potential employers!
+</p>
+
+</div>
+
+<div>
+<div class="inline border-top" onclick="OpenUp(4)">
+<p class="text">
+  How can I get help if I'm stuck on a Frontend Mentor challenge?
+  </p>
+<button type="button" class="button" ><img src="assets/images/icon-plus.svg" alt="plus" class="plus" id="img4"></button>
+</div>
+
+  <p class="collapse hidden" id="text4">
+  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+  channel where you can ask questions and seek support from other community members.
+</p>
+</div>
+  </main>
+
+
+
+  <script>
+
+function OpenUp(number){
+let obj = document.getElementById("text"+number);
+let img =  document.getElementById("img"+number);
+obj.classList.toggle("hidden");
+
+if(obj.classList.contains("hidden")){
+  img.src="assets/images/icon-plus.svg"
+}else{
+  img.src="assets/images/icon-minus.svg"
+}
+}
+
+  </script>
+  
+</body>
+</html>
